@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 			else if (format[index + 1] == '%')
 				percent_spcfr();
 			else if (format[index + 1] == 'd' || format[index + 1] == 'i')
-				len += (print_integer(va_arg(arguements, int) - 1);
+				len += (print_integer(va_arg(arguements, int)) - 1);
 			index++;
 		}
 		len++;
