@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
                         if (format[index + 1] == 'c')
                                 c_specifier(va_arg(arguements, int));
                         else if (format[index + 1] == 's')
-                                len += (str_specifier(va_arg(arguements, char *)) - 1);
+                                len += str_specifier(va_arg(arguements, char *));
                         else if (format[index + 1] == '%')
                                 percent_spcfr();
                         else if (format[index + 1] == 'd' || format[index + 1] == 'i')
