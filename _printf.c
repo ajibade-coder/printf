@@ -10,9 +10,12 @@ int _printf(const char *format, ...)
 	int index;
 	va_list arguements;
 
-	if (format == NULL)
+	if (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-
+	if (!format || (format[0] == '%' && !format[1]))
+		return (-1);
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
+		return (-1);
 	va_start(arguements, format);
 
 	for (index = 0 ; format[index] != '\0' ; index++)
