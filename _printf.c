@@ -4,7 +4,7 @@
  * @format: is a constant  character string
  * Return: if format string equal NULL return -1, else return int len
  */
-int _printf(const cihar *format, ...)
+int _printf(const char *format, ...)
 {
 	int len = 0;
 	int index;
